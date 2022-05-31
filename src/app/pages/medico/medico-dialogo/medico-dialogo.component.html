@@ -1,0 +1,30 @@
+<div>
+    <h1 mat-dialog-title>MEDICO</h1>
+    <div mat-dialog-content>
+        <div style="display: flex;flex-direction: column; margin:1rem auto; max-width: 600px; padding: 1rem;">
+
+            <mat-form-field>
+                <input matInput [(ngModel)]="medico.nombres" type="text" placeholder="Nombre">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput [(ngModel)]="medico.apellidos" type="text" placeholder="Apellidos">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput [(ngModel)]="medico.cedula" type="text" placeholder="Cedula">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput [(ngModel)]="medico.fotoUrl" type="text" placeholder="Foto URL">
+            </mat-form-field>
+            <img *ngIf="edicion" src="{{medico.fotoUrl}}" alt="">
+
+        </div>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="cancelar()">Cancelar</button>
+        <button mat-button  cdkFocusInitial (click)="agregar()">Confirmar</button>
+        <!-- [mat-dialog-close]="data" -->
+    </div>
+</div>

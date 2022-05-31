@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-root',
@@ -8,3 +10,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'MEDIAPP-FRONTEND-SOFTTEK';
 }
+
